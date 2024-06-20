@@ -16,6 +16,12 @@ export type Game = {
 };
 
  const useGames = ( selectedGenre : Genre | null) => {
-  return useData<Game>('/games', {params: { genre: selectedGenre?.id}}, [selectedGenre?.id])
-}
+  return useData<Game>('/games', 
+      {
+         params: { genre: selectedGenre?.id }
+      },
+      [selectedGenre?.id]
+    );
+   
+   }
 export default useGames;

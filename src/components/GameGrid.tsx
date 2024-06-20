@@ -11,6 +11,7 @@ type Props = {
 }
 function GameGrid( { selectedGenre } : Props) {
   const { data, error, isLoading  } = useGames( selectedGenre );
+  
   const skeletons = [1, 2, 3, 4, 5, 6];
   return (
     <>
