@@ -9,7 +9,7 @@ function SearchInput( { onSearch} : Props) {
 
     const inputRef = useRef<HTMLInputElement>( null);
 
-    const handleSubmit = ( event ) => {
+    const handleSubmit = ( event : React.FormEvent ) => {
         event.preventDefault();
         if(inputRef.current) onSearch(inputRef.current?.value)
     }
